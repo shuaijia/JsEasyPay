@@ -160,5 +160,6 @@ UPPay.getPayResult(data, new UPPay.UPPayCallback() {
 ```
 #### step 5:银联集成完了，有没有很简单！
 ### 最后，由于时间匆忙，难免有错或需要改进的地方 有好的建议记得联系我哦！
-### 电话：13693510929
-![image](https://raw.githubusercontent.com/shuaijia/JsEsayPay/master/pics/weixin.png)
+### 邮箱 819418850@qq.com
+### 欢迎微信骚扰
+![image](https://raw.githubusercontent.com/shuaijia/JsEsayPay/master/pics/erweima.png)
