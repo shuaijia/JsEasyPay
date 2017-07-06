@@ -16,6 +16,15 @@
             </intent-filter>
         </activity>
 
+        <!--银联支付页-->
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
         <!-- 微信支付回调页-->
         <activity
             android:name=".wxapi.WXPayEntryActivity"
