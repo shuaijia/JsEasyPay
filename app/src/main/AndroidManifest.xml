@@ -25,6 +25,7 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
 
+
         <!-- 微信支付回调页-->
         <activity
             android:name=".wxapi.WXPayEntryActivity"
