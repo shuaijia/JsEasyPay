@@ -1,6 +1,10 @@
+
 # JsEsayPay
+
 对安卓端微信、支付宝、银联支付作封装，便于快速集成支付
+
 ## 使用方法
+
 ### 在build.gradle中
 ```java
 allprojects {
