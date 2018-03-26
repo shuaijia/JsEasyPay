@@ -6,6 +6,7 @@
 ## 使用方法
 
 ### 在build.gradle中
+
 ```java
 allprojects {
 	repositories {
@@ -18,9 +19,13 @@ dependencies {
 	compile 'com.github.shuaijia:JsEasyPay:v1.1'
 }
 ```
+
 ### 注：每次返回支付成功后，都建议再次请求服务器是否成功，双方都返回成功，则此次交易成功，否则失败。
+
 ### 微信支付
+
 #### step 1：在清单文件中添加(直接复制即可)
+
 ```java
 <!-- 微信支付权限-->
 <uses-permission android:name="android.permission.INTERNET" />
