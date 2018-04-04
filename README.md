@@ -38,8 +38,10 @@ dependencies {
 		<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
 	</intent-filter>
 </receiver>
+
 ```
 #### step 2:在根包名下建wxapi包，在该包下新建WXPayEntryActivity（支付完成回调页），继承JsWXPayHandler，实现其抽象方法(已回到主线程执行)
+
 ```java
 @Override
 public void create(Bundle savedInstanceState) {
