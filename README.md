@@ -38,8 +38,8 @@ dependencies {
 		<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
 	</intent-filter>
 </receiver>
-
 ```
+
 #### step 2:在根包名下建wxapi包，在该包下新建WXPayEntryActivity（支付完成回调页），继承JsWXPayHandler，实现其抽象方法(已回到主线程执行)
 
 ```java
@@ -63,8 +63,11 @@ public void payFail() {
 
 }
 ```
+
 将该Activity在清单文件中注册
+
 #### step 3:将订单信息提交服务器，获取prepay_id， 开始支付
+
 ```java
 String prepay_id = "GET PREPAY_ID FROM SERVER";// 下单后将订单信息传给服务器，以获取prepay_id
 
@@ -75,10 +78,13 @@ WXPayConfig.getInstance().setMCH_ID("YOUR MCH_ID");
 WXPay wxPay = new WXPay(MainActivity.this);
 wxPay.pay(prepay_id);
 ```
+
 #### step 4:微信支付集成到此完成
 
 ### 支付宝支付
+
 #### step 1:在清单文件中（直接复制即可）
+
 ```java
 <!-- 支付宝支付权限-->
 <uses-permission android:name="android.permission.INTERNET" />
@@ -87,7 +93,9 @@ wxPay.pay(prepay_id);
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
+
 #### step 2: 配置账号信息，并创建支付对象
+
 ```java
 AlipayConfig.getInstance().setSELLER("YOUR SELLER"); // 商户收款账号
 AlipayConfig.getInstance().setPARTNER("YOUR PARTNER"); // 商户PID
@@ -96,7 +104,9 @@ AlipayConfig.getInstance().setCALL_SERVER_URL("YOUR CALLBACK URL"); // 支付宝
 
 AliPay aliPay = new AliPay(MainActivity.this, "GOODS NAME", "GOODS DETAIL", "PRICE");
 ```
+
 #### step 3:将订单ID和订单信息传给服务器，返回是否可以支付，可以则开始支付（项目不同，可自行处理此逻辑）
+
 ```java
 // 将订单id和info传给服务器，可以支付，则开始支付
 if (checkOrderFromServer(aliPay.getOrderId(), aliPay.getOrderInfo())) {
