@@ -131,7 +131,9 @@ if (checkOrderFromServer(aliPay.getOrderId(), aliPay.getOrderInfo())) {
 #### step 4:支付宝集成完成
 
 ### 银联支付
+
 #### step 1:在清单文件中（直接复制即可）
+
 ```java
 <!--银联支付权限-->
 <uses-permission android:name="android.permission.INTERNET" />
